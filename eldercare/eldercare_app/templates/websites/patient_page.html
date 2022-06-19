@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient: {% for i in patient %}{{i.name}}{% endfor %}</title>
+</head>
+<body>
+{% for i in patient %}<h1>{{i.name}}</h1><br><p>born : {{i.birthdate}}</p><br><p>medications : {{i.medications}}</p><br><p>emergency number: {{i.emergency_number}}</p><br><p>patient located in {{i.location}}<br><p>other things to be noted: {{i.extra_info}}</p></p>{%endfor%}
+</body>
+</html>
+{% endblock %}

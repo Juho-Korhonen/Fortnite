@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for member in staff %}
+    <p>{{member.title}} {{member.name}}</p>
+    <p>worktime: {{member.work_time}}</p>
+    <p>contact: {{member.email}}</p>
+    <p>salary: {{member.salary}}</p>
+    <hr>
+
+    {% endfor %}
+</body>
+</html>
+{% endblock %}
